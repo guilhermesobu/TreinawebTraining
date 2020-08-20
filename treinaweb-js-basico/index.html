@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    
+        <a>DIV 1, ela atualiza depois de 1 segundo sem digitar nada</a><br>    
+        <input type="text" id="inputOne">
+        <div id="divOne"></div><br>
+        <a>DIV 2, ela atualiza a cada 2 segundos e não precisa parar de digitar para isso</a><br>
+        <input type="text" id="inputTwo">
+        <div id="divTwo"></div>
+
+        <br><br><br><br>
+
+        <form name="myForm" action="index.html" method="POST" onsubmit="return submitForm()">
+            <input type="text" name="message">
+            <button type="submit">Enviar formulário</button>
+        </form>
+
+        <br><br>
+        <form name="chalenge" action="chalenge.html" method="post">
+            <button type="submit">Ir para o desafio</button>
+        </form>
+
+        <script src="form.js"></script>
+        <script src="debouncing.js"></script>
+        <script src="exercices.js"></script>
+        <!-- <script src="./scripts.js"></script> -->
+
+    </body>
+</html>
