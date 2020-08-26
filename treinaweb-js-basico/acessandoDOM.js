@@ -27,3 +27,39 @@ A parte que trás o .outerHTML quer dizer que isso irá retornar uma string, e �
 document.querySelector('').insertAdjacentHTML('afterend', myLi.outerHTML); //Faz o mesmo que o anterior, mas insere depois da TAG buscada
 
 document.querySelector('').cloneNode(true); //Com isso podemos clonar o elemento,para não ter que ficar digitando todo o comando novamente toda vez
+
+
+
+//OBJETOS PARA TRABALHAR COM O NAVEGADOR - Algumas funções
+
+/*objeto "window", ele referencia a propria página em que estamos, podemos utilziar uma função chamada 
+    window.close()
+    com essa função nós fechamos a página em que estamos no momento.
+    Podemos trabalhar assim
+
+    var myWin = window.open('treinaweb.com.br');        Isso vai abrir a página do treinaweb
+    mywin.close();                                      isso vai fechar a página que acabamos de abrir do treinaweb 
+
+    Essas funções só funciona caso o usuário esteja clicandm em um botão, ela não pode ser evocada diretamente pela linha de código, caso
+    tente fazer isso, o navegador irá bloquear esse comando e o pop-up
+    */
+
+/*objeto "location", ele referencia a página que estamos
+    Se abrirmos o location diretamente no console log, ele irá abrir todas as inforamções que contém na página e podemos usar
+    esses atributos da página, como por exemplo 
+    
+    location.href
+    Ele vai retornar o link (url) da página
+    
+    location.search
+    Aqui ele retorna aqueles valores que ficam depois da interrogação "...br/?osargumentosaqui"
+    */
+
+/*objeto "history", ele trabalha com os históricos de acesso de cada página
+    Esse objeto só funciona quando o SERVIDOR estiver ativo, podemos ativar o servidor acessando pelo terminal a pasta do index.html que 
+    estamos trabalhando e digitar "http-server", ai acessamos no navegador via a porta que aparecerá
+ 
+    history.forward() e history.go(1) são a mesma coisa, eles vão na página seguinte (quando não estamos na ultima página acessada)
+    history.back() e history.go(-1) são a mesma coisa, eles fazem voltar à página anteriormente acessada
+    history.length() mostra quantos acessos fizemos, seja pra frente ou para trás
+    */
